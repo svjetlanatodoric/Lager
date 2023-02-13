@@ -27,9 +27,34 @@ if (isset($_COOKIE['korisnickoIme'])) {
                 <div>
                     <input class="no-outline" name="sifra" type="password" placeholder="Unesite lozinku..." required>
                 </div>
-            <?php
-            require_once("forgot-password.php");
-            ?>
+                <?php
+                if (isset($_POST['korisnickoIme']) && isset($_POST['sifra'])) {
+
+                    include_once("../constants.php");
+                    $connection = mysqli_connect(SERVER_NAME, USERNAME, PASSWORD, DB_NAME);
+
+                    $username = htmlspecialchars($_POST['korisnickoIme'], ENT_QUOTES, 'UTF-8');
+                    $password = htmlspecialchars($_POST['sifra']);
+
+                    $sql = "SELECT KorisnickoIme, Sifra FROM `korisnik` WHERE KorisnickoIme='$username'";
+                    $result = $connection->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                        $dbime = $row['KorisnickoIme'];
+                        $dbsifra = $row['Sifra'];
+                        if (password_verify($password, $dbsifra) == false) {
+                            require_once("wrong-password.php");
+                            require_once("forgot-password.php");
+                        }
+                       
+                    } else  {
+                        require_once("user-not-found.php");
+                        require_once("forgot-password.php");
+                        
+                    }
+                }
+                ?>
 
                 <div>
                     <input type="submit" class="login-btn" value="LOG IN">
@@ -38,9 +63,9 @@ if (isset($_COOKIE['korisnickoIme'])) {
             </div>
 
         </form>
-        
+
     </div>
-    
+
 
     <script src="../js/modal.js"></script>
 </body>
