@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-family: Roboto;
+    background:
+        -webkit-linear-gradient(rgb(96 33 102), rgb(135 60 255 / 40%) 0%), -webkit-linear-gradient(-45deg, rgb(120 155 255 / 49%) 45%, rgb(0 23 189 / 49%) 0%);
+    height: 100%;
+}

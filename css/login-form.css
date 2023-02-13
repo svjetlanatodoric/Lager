@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-family: Roboto;
+  background: linear-gradient(70deg, #efd5ff 0%, #515ada 100%);
+  height: 100%;
+  overflow: hidden;
+}
+
+h2 {
+  color: #2631d7;
+  letter-spacing: 2px;
+}
+
+.prijavite-se {
+  margin: unset;
+  height: 15%;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(42px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-1,
+.div-2,
+.div-3 {
+  box-shadow: 0 0 13px #67646438;
+}
+
+.div-1 {
+  top: -39%;
+  right: -28%;
+  width: 71%;
+  height: 47%;
+  background: linear-gradient(144deg, #515ada33, #efd5ff3d);
+  position: absolute;
+  rotate: -30deg;
+}
+
+.div-2 {
+  left: -50%;
+  rotate: 142deg;
+  position: absolute;
+  background: linear-gradient(45deg, #d797ffb0, #515ada85);
+  width: 75%;
+  height: 46%;
+}
+
+.div-3 {
+  left: 53%;
+  overflow: hidden;
+  rotate: 45deg;
+  width: 35%;
+  height: 59%;
+  background: linear-gradient(45deg, #515ada3d, #efd5ff5e);
+  position: absolute;
+  bottom: -37%;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 66%;
+}
+
+#login-form {
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  display: flex;
+  text-align: left;
+  padding: 30px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 400px;
+  margin: 7rem auto;
+}
+
+#login-form form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  align-items: center;
+}
+
+#login-form form div {
+  margin-bottom: 20px;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+#login-form form input[type="text"],
+#login-form form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #515ada;
+  background-color: #fff;
+}
+
+#login-form form input[type="submit"] {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #515ada;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#login-form form input[type="submit"]:hover {
+  background-color: #2631d7;
+  transition: .2s;
+}
+
+#login-form p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+#login-form p a {
+  color: #333;
+}
+
+.prijavite-se {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#modal-btn:hover {
+  cursor: pointer;
+  color: #2631d7;
+  transition: .2s;
+}
+.modal {
+  display: none;
+}
