@@ -11,7 +11,7 @@ submit.addEventListener("click", function () {
   registerForm.style.display = "none";
 });
 function modalExit() {
-  modal.style.display = "none";
+  window.location=("register.php")
 }
 
 
@@ -20,5 +20,4 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-
 
