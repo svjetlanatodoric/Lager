@@ -166,3 +166,6 @@ h2 {
 div p#wrong-password.wrong-password{
   margin: -10px;
 }
+div p.no-user#no-user{
+  margin: -10px;
+}
