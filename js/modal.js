@@ -6,7 +6,7 @@ var btn = document.getElementById("modal-button");
 var span = document.getElementById("close");
 
 function modalExit(){
-  modal.style.display = "none";
+  window.location=("login.php")
 }
 
 window.onclick = function(event) {
@@ -16,6 +16,5 @@ window.onclick = function(event) {
 }
 
 function hideLogin() {
-  modal.style.display = "block";
-
+  window.location=("password-recovery.php")
 }
