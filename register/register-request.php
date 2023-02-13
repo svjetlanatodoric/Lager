@@ -19,35 +19,19 @@ if (isset($_POST['korisnickoIme'])) {
 
     if (!empty($response) && $response->num_rows >= 1) {
         header("Location: ../account-already-exists.php");
-    } 
-     if ($rola == 1) {
-        require_once("if-admin-selected.php");
-        // if ($rola == 1) {
-        //     require_once("modal.php");
-        //     $sql_query = "
-        // INSERT INTO `korisnik`
-        //     (`KorisnickoIme`,
-        //      `Sifra`,
-        //      `RolaId`)
-        //     VALUES
-        //     ('$korisnickoIme',
-        //      '$password',
-        //      '$rola')";
-
-        //      setcookie('korisnickoIme', htmlspecialchars($_POST['korisnickoIme']), time() + 3600, '/');
-        //      $_COOKIE['korisnickoIme'] = $korisnickoIme;
-        //      if (isset($_COOKIE['korisnickoIme'])) {
-        //          header("Location: ../pocetna-stranica.php");
-        //          $db->close();
-        //          die();
-        //      }
-        //     $db->query($sql_query);
-        } 
-         if ($rola!=1 && $rola == 2) {
-require_once("if-radnik-selected.php");
-header("Location:../pocetna-stranica.php");
-
+    }
+    if ($rola == 1) {
+        if (!empty($response) && $response->num_rows >= 1) {
+            header("Location: ../account-already-exists.php");
+        } else {
+            require_once("if-admin-selected.php");
         }
     }
-
-?>
+    if ($rola != 1 && $rola == 2) {
+        if (!empty($response) && $response->num_rows >= 1) {
+            header("Location: ../account-already-exists.php");
+        }
+        require_once("if-radnik-selected.php");
+        header("Location:../pocetna-stranica.php");
+    }
+}
