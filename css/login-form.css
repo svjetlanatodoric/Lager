@@ -139,7 +139,7 @@ h2 {
 }
 
 #login-form p {
-  margin-top: 20px;
+   margin-top: 20px; 
   font-size: 14px;
   color: #333;
 }
@@ -162,4 +162,7 @@ h2 {
 }
 .modal {
   display: none;
+}
+div p#wrong-password.wrong-password{
+  margin: -10px;
 }
