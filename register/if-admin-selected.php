@@ -23,20 +23,10 @@ if ($rola == 1) {
             $db->query($sql_query);
             setcookie('korisnickoIme', htmlspecialchars($_POST['korisnickoIme']), time() + 3600, '/');
             $_COOKIE['korisnickoIme'] = $korisnickoIme;
-        // setcookie('korisnickoIme', htmlspecialchars($_POST['korisnickoIme']), time() + 3600, '/');
-        // $_COOKIE['korisnickoIme'] = $korisnickoIme;
-        // header("Location: ../pocetna-stranica.php");
+            setcookie('rola', $rola, time() + 3600, '/');
+            $_COOKIE['rola'] = $rola;
         
-        // $sql_query = "
-        // INSERT INTO `korisnik`
-        // (`KorisnickoIme`,
-        // `Sifra`,
-        // `RolaId`)
-        // VALUES
-        // ('$korisnickoIme',
-        // '$password',
-        // '$rola')";
-        
+          
         require_once("admin-verify.php");
         $db->close();
         die();
