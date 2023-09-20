@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Sora;
+}
+
+@font-face {
+  font-family: Sora;
+  src: url(../fonts/Sora/Sora-Regular.ttf) format("truetype");
+  }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#dodaj-artikal {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #515ada;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#dodaj-artikal:hover {
+  box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+
+}
+
+#dodaj-forma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#dodaj-forma input[type="text"] {
+  margin-top: 5%;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(175 194 212);;
+  background-color: #fff;
+  box-shadow: 20px 1px 7px 0px rgb(175 194 212);
+  outline: none !important;
+
+}
+
+#artikli-add-inputs div:focus{
+  outline: none;
+}
+#artikli-add-inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+
+}
+
+
+div #add-btn {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #515ada;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 2%
+}
+
+#add-btn:hover {
+  background-color: #2631d7;
+  transition: .2s;
+  box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+a:hover{
+  color: #2631d7;
+  transition: .2s;
+}
