@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Sora;
+}
+
+@font-face {
+  font-family: Sora;
+  src: url(../fonts/Sora/Sora-Regular.ttf) format("truetype");
+  }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #fefefe;
+}
+
+section.table-sections {
+  transition: all 0.3s;
+  width: 90%;
+  margin: 7% 0 0 5%;
+}
+
+div.tabela-container {
+  
+  box-shadow: 8px 8px 16px #7847c224;
+  width: 100%;
+}
+
+table.tabela {
+  white-space: nowrap;
+  text-align: center;
+  margin-right: auto;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+tbody {
+  border-bottom: 1px solid #7847c236;
+}
+
+thead {
+  border-bottom: 1px solid #7847c236;
+  color: #313131;
+}
+
+th {
+  padding: 15px;
+}
+
+td {
+  padding: 15px;
+}
+
+header{
+  height: 3rem;
+  margin: 3% auto;
+  border-bottom: 1px solid #6B3CB4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: #6B3CB4;
+  letter-spacing: 3px;
+}
+.table-button {
+  height: 25px;
+  width: 70px;
+  background-color: #fefefe;
+}
+
+.edit-btn{
+  border: 1px solid #9ea4ff;
+}
+.delete-btn{
+  border: 1px solid #ff9494;
+}
+
+@media screen and (max-width: 768px) {
+  section.table-sections {
+    width: 100%;
+    left: 0;
+    top: 20%;
+  }
+
+  #tabela-artikli,
+  #tabela-lager,
+  #tabela-radnici {
+    margin: unset;
+  }
+
+  #izmijeni-artikal-btn {
+    position: fixed;
+    left: 223px;
+    height: 5%;
+    border-left: 1px solid #515ada;
+  }
+
+  div div.logout {
+    width: 104px;
+    border: none;
+    top: 60px;
+    position: fixed;
+    left: 119px;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: unset;
+  }
+
+  div.logout form {
+    position: fixed;
+  }
+}
