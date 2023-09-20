@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Sora;
+  }
+  
+  @font-face {
+    font-family: Sora;
+    src: url(../fonts/Sora/Sora-Regular.ttf) format("truetype");
+    }
+  
+  @font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+    }
+  
+  /* div#dodaj-artikal-modal{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+      border-radius: 5px;
+      padding: 30px;
+    } */
+  h3#add-heading {
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px #e5e5e5;
+  }
+  
+  /* .modal {
+      top: -50%;
+      left: 50%;
+      transform: translateX(-25%);
+    position: fixed;
+    z-index: 1;
+    width: 55%;
+    height: 90%;
+    overflow: hidden;
+    background: white;
+    backdrop-filter: blur(1px);
+    background-color: rgb(255 235 235 / 4%);
+   
+
+  }
+  .modal.show{
+    display: block;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes slide-in {
+    from {
+      top: -50%;
+    }
+    to {
+      top: 50%;
+    }
+  } */
+  
+  
+  /* Modal Content/Box */
+  
+  .entire-modal-content {
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: auto;
+    height: 90%;
+    width: 60%;
+    box-shadow: 1px 1px 10px #00000038;
+  
+  }
+  
+  .modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close {
+    top: 5%;
+    right: -90%;
+    color: #3333338f;
+  
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #dodaj-artikal {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #515ada;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #dodaj-artikal:hover {
+    box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+  
+  }
+  
+  #dodaj-forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  #dodaj-forma input[type="text"] {
+    margin-top: 5%;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(175 194 212);;
+    background-color: #fff;
+    box-shadow: 20px 1px 7px 0px rgb(175 194 212);
+    outline: none !important;
+  
+  }
+  
+  #artikli-add-inputs div:focus{
+    outline: none;
+  }
+  #artikli-add-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+  
+  }
+  
+  
+  div #add-btn {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #515ada;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 2%
+  }
+  
+  #add-btn:hover {
+    background-color: #2631d7;
+    transition: .2s;
+    box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+  
+  }
+  a{
+    text-decoration: none;
+    color:black;
+  }
+  a:hover{
+    color: #2631d7;
+    transition: .2s;
+  }
