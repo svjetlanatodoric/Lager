@@ -16,26 +16,35 @@ if (isset($_POST['korisnickoIme']) && isset($_POST['sifra'])) {
     $username = htmlspecialchars($_POST['korisnickoIme'], ENT_QUOTES, 'UTF-8');
     $password = htmlspecialchars($_POST['sifra']);
 
-    $sql = "SELECT KorisnickoIme, Sifra FROM `korisnik` WHERE KorisnickoIme='$username'";
+    $sql = "SELECT KorisnickoIme, Sifra, RolaId FROM `korisnik` WHERE KorisnickoIme='$username'";
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $dbime = $row['KorisnickoIme'];
         $dbsifra = $row['Sifra'];
+        $dbrola = $row['RolaId'];
+
         if (password_verify($password, $dbsifra)) {
             setcookie('korisnickoIme', htmlspecialchars($_POST['korisnickoIme']), time() + 3600, '/');
+            setcookie('rola', $dbrola, time() + 3600, '/');
             $_COOKIE['korisnickoIme'] = $korisnickoIme;
-
-            header("Location: ../pocetna-stranica.php");
-            exit;
+            $_COOKIE['rola'] = $dbrola;
+            if ($dbime ==$username && $dbrola == 1) {
+                header("Location: ../admin/artikli-a.php");
+                exit;
+            } else{
+                header("Location: ../radnik/artikli-r.php");
+                exit;
+            }
         }
+        
         if (password_verify($password, $dbsifra) == false) {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 require_once("login.php");
             }
         }
-    } else{
+    } else {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             require_once("login.php");
         }
