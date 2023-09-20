@@ -1,0 +1,129 @@
+ * {
+   margin: 0;
+   padding: 0;
+   font-family: Sora;
+   overflow: visible;
+ }
+
+ @font-face {
+   font-family: Sora;
+   src: url(../fonts/Sora/Sora-Regular.ttf) format("truetype");
+ }
+
+ @font-face {
+   font-family: Roboto;
+   src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+   font-weight: 400;
+   font-style: normal;
+ }
+
+ /*
+table {
+  position: fixed;
+  margin: 1em 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.25em 0.5em 0.25em 1em;
+  vertical-align: text-top;
+  text-align: left;
+  text-indent: -0.5em;
+}
+
+th {
+  vertical-align: bottom;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-weight: bold;
+}
+*/
+ #dodaj-stavku-section {
+   margin-bottom: 2rem;
+   height: 8rem;
+ }
+
+ /* input fields of form for adding new items */
+ #artikli-racun-inputs {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+
+ #artikli-racun-inputs input,
+ select {
+   padding: .5rem;
+   border: 1px solid #7d7d7d;
+   margin-right: 1em;
+ }
+
+ #dodaj-racun-forma {
+   display: flex;
+   flex-direction: column;
+   align-content: stretch;
+   flex-wrap: wrap;
+   height: 100%;
+   justify-content: space-evenly;
+ }
+
+ /* container of submit button */
+ .dodaj-stavku {
+   display: flex;
+   width: 10rem;
+   justify-content: center;
+ }
+
+ /* button itself */
+ input#dodaj-stavku {
+   background-color: #6b3cb4;
+   border: 1px solid #6b3cb4;
+   border-radius: 3px;
+   color: white;
+   font-weight: bolder;
+   letter-spacing: 1px;
+   width: 100%;
+ }
+
+ input#dodaj-stavku:hover {
+   cursor: pointer;
+   scale: 1.01;
+   box-shadow: 5px 3px 6px 0px #7847c261;
+   transition: .2s;
+ }
+
+ /*
+#stavka-section {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+}
+
+#racun-tabela {
+  left: 20%;
+  height: 100%;
+  position: absolute;
+  top: 5%;
+  width: -webkit-fill-available
+
+}
+
+#racun-container {
+  margin-top: 5%;
+}
+*/
+ #tabela-stavka-section {
+   display: none;
+   z-index: 1;
+   width: fit-content;
+   position: absolute;
+   left: 50%;
+   top: 20%;
+ }
+
+ /* 
+div#add-stavka {
+  position: relative;
+  top: 20%;
+}  */
