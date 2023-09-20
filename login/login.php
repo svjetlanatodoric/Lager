@@ -3,9 +3,13 @@
     <link rel="stylesheet" href="../css/login-form.css">
 </head>
 <?php
-if (isset($_COOKIE['korisnickoIme'])) {
-    unset($_COOKIE['korisnickoIme']);
-    setcookie('korisnickoIme', '', time() - 3600);
+if (isset($_COOKIE['korisnickoIme'])&&isset($_COOKIE['rola'])) {  
+    unset($_COOKIE['korisnickoIme']); 
+    unset($_COOKIE['rola']); 
+    setcookie('korisnickoIme', null, -1, '/'); 
+    setcookie('rola', null, -1, '/'); 
+    header("Location: ../login/login.php");
+    return true;
 }
 ?>
 
