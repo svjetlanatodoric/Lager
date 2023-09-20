@@ -41,17 +41,17 @@
                                 <option value="<?php echo $korisnik['RolaId'] ?>">
                                     <?php echo $korisnik['NazivRole'] ?>
                                 </option>
-                                <?php
+                        <?php
                             }
                         }
                         ?>
-</select>
-</div>
-<div>
-    <input id="register-submit" type="submit" value="REGISTER">
-</div>
+                    </select>
+                </div>
+                <div>
+                    <input id="register-submit" type="submit" value="REGISTER">
+                </div>
 
-</form>
+        </form>
     </div>
     <p>Imate nalog? <a href="../login/login.php">Prijavite se</a></p>
     </div>
