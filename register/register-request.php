@@ -24,8 +24,6 @@ if (isset($_POST['korisnickoIme'])) {
         } else {
             require_once("if-admin-selected.php");
             require_once("admin-verify.php");
-    
-
         }
     }
     if ($rola != 1 && $rola == 2) {
@@ -34,12 +32,15 @@ if (isset($_POST['korisnickoIme'])) {
         }
         else
         require_once("if-radnik-selected.php");
+
+        //create cookies with username value and role value
         
     setcookie('korisnickoIme', htmlspecialchars($_POST['korisnickoIme']), time() + 3600, '/');
     $_COOKIE['korisnickoIme'] = $korisnickoIme;
-    header("Location: ../pocetna-stranica.php");
+    setcookie('rola', $rola, time() + 3600, '/');
+    $_COOKIE['rola'] = $rola;
 
-        header("Location:../pocetna-stranica.php");
+
 
     }
 }
