@@ -3,7 +3,6 @@ var recoveryForm = document.getElementById("recovery-form");
 
 var modal = document.getElementById("modal");
 var btn = document.getElementById("modal-button");
-var span = document.getElementById("close");
 
 function modalExit(){
   window.location=("login.php")
