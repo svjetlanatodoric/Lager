@@ -15,7 +15,7 @@ INSERT INTO `korisnik`
     $db->query($sql_query);
     setcookie('korisnickoIme', htmlspecialchars($_POST['korisnickoIme']), time() + 3600, '/');
     $_COOKIE['korisnickoIme'] = $korisnickoIme;
-    header("Location: ../pocetna-stranica.php");
+    header("Location: ../radnik/artikli-r.php");
 
     $db->close();
     die();
