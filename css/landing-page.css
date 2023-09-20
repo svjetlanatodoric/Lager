@@ -12,7 +12,49 @@
 
 html {
     font-family: Roboto;
-    background:
-        -webkit-linear-gradient(rgb(96 33 102), rgb(135 60 255 / 40%) 0%), -webkit-linear-gradient(-45deg, rgb(120 155 255 / 49%) 45%, rgb(0 23 189 / 49%) 0%);
+    background: -webkit-linear-gradient(rgb(96 33 102 / 56%), rgb(135 60 255 / 34%) 0%), -webkit-linear-gradient(-45deg, rgb(120 155 255 / 26%) 45%, rgb(0 23 189 / 27%) 0%);
     height: 100%;
 }
+
+body {
+    height: 100%;
+}
+
+div.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.login,
+.register {
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+input[type="button"],
+input[type="submit"] {
+    letter-spacing: 1px;
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    background-color: rgb(255 255 255 / 26%);
+    border-radius: 20px;
+    color: #000;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 3px 3px 0px #0000000a;
+}
+h1{
+color: rgb(76 26 157 / 82%)}
