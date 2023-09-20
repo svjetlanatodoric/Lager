@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Sora;
+}
+
+@font-face {
+    font-family: Sora;
+    src: url(../fonts/Sora/Sora-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* STYLE FOR EDITING ITEMS MODAL   */
+#form-edit {
+    flex-direction: column;
+    background-color: #fefefebf;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+
+}
+
+#artikli-edit-inputs div:focus {
+    outline: none;
+}
+
+#artikli-edit-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+
+#artikli-edit-inputs div input {
+    margin-top: 5%;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(175 194 212);
+    ;
+    background-color: #fff;
+    box-shadow: 1px 3px 7px 0px rgb(175 194 212);
+    outline: none !important;
+
+}
+
+/* Button inside modal form */
+#edit-btn {
+    margin-top: 5%;
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #515ada;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 2%
+}
+
+#edit-btn:hover {
+    background-color: #2631d7;
+    transition: .2s;
+    box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+}
+/* 
+#izmijeni-artikal {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    color: #515ada;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #515ada;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+#izmijeni-artikal:hover {
+    box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+
+} */
+
+#edit-lager-btn {
+    margin-top: 5%;
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #515ada;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 2%;
+}
+
+#artkli-lager-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#artikli-lager-inputs div input,
+select {
+    margin-top: 5%;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(175 194 212);
+    ;
+    background-color: #fff;
+    box-shadow: 1px 3px 7px 0px rgb(175 194 212);
+    outline: none !important;
+
+}
+
+#add-lager-btn {
+    margin-top: 5%;
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #515ada;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 2%;
+}
+
+#add-lager-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#add-lager-inputs div input,
+select {
+    margin-top: 5%;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(175 194 212);
+    ;
+    background-color: #fff;
+    box-shadow: 20px 1px 7px 0px rgb(175 194 212);
+    outline: none !important;
+
+}
+
+#artikli-lager-inputs select {
+    box-shadow: 0px 1px 7px 0px rgb(175 194 212);
+    width: unset;
+}
+
+
+
+
+#radnik-edit-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#radnik-edit-inputs div input,
+select {
+    margin-top: 5%;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    border: 1px solid rgb(175 194 212);
+    ;
+    background-color: #fff;
+    box-shadow: 20px 1px 7px 0px rgb(175 194 212);
+    outline: none !important;
+
+}
