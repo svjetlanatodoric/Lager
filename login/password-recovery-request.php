@@ -13,14 +13,19 @@ if (isset($korisnickoIme)) {
 
 
     if ($passwordConfirm === $newPassword) {
-        $sql_query = "UPDATE `korisnik` SET Sifra='" . password_hash($newPassword, PASSWORD_BCRYPT) . "' WHERE KorisnickoIme='$korisnickoIme'";
+        $sql_query =
+            "UPDATE `korisnik` 
+         SET 
+         Sifra='" . password_hash($newPassword, PASSWORD_BCRYPT) . "'
+          WHERE 
+          KorisnickoIme='$korisnickoIme'";
         $response = $connection->query($sql_query);
         header("Location: login.php");
-    } 
+    }
     if ($passwordConfirm != $newPassword) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        require_once("password-recovery.php");
+            require_once("password-recovery.php");
         }
     }
-    }
-        ?>
+}
+?>
