@@ -1,2 +1,2 @@
-#This application is created for warehouse monitoring and managing.
+#This multi-role web application is created for warehouse monitoring and managing. User is able to register as admin or employee. Data is stored in database (passwords are encrypted!). It offers ability of issuing invoices, reviewing employees, items and warehouses. CRUD actions implemented. 
 It's made with love, HTML, CSS, JS, PHP and lies on MySQL DB. It runs on Apache localhost.
