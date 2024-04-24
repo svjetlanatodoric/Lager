@@ -1,7 +1,6 @@
 <head>
      <link rel="stylesheet" href="../css/tabela.css">
      <link rel="stylesheet" href="../css/artikli-add.css">
-     <link rel="stylesheet" href="../css/logout-btn.css">
      <link rel="stylesheet" href="../css/radnici.css">
 </head>
 
