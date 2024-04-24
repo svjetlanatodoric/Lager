@@ -1,13 +1,15 @@
 <head>
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/login-form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <?php
-if (isset($_COOKIE['korisnickoIme'])&&isset($_COOKIE['rola'])) {  
-    unset($_COOKIE['korisnickoIme']); 
-    unset($_COOKIE['rola']); 
-    setcookie('korisnickoIme', null, -1, '/'); 
-    setcookie('rola', null, -1, '/'); 
+if (isset($_COOKIE['korisnickoIme']) && isset($_COOKIE['rola'])) {
+    unset($_COOKIE['korisnickoIme']);
+    unset($_COOKIE['rola']);
+    setcookie('korisnickoIme', null, -1, '/');
+    setcookie('rola', null, -1, '/');
     header("Location: ../login/login.php");
     return true;
 }
@@ -51,16 +53,14 @@ if (isset($_COOKIE['korisnickoIme'])&&isset($_COOKIE['rola'])) {
                             require_once("wrong-password.php");
                             require_once("forgot-password.php");
                         }
-                       
-                    } else  {
+                    } else {
                         require_once("user-not-found.php");
                         require_once("forgot-password.php");
-                        
                     }
                 }
                 ?>
 
-                <div>
+                <div id="login-btn-container">
                     <input type="submit" class="login-btn" value="LOG IN">
                 </div>
                 <p>Nemate nalog? <a href="../register/register.php">Registrujte se</a></p>
