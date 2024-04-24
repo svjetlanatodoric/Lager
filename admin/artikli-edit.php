@@ -1,6 +1,5 @@
 <head>
     <link rel="stylesheet" href="../css/form-edit.css">
-    <link rel="stylesheet" href="../css/logout-btn.css">
 </head>
 
 <body>
@@ -14,6 +13,9 @@
                 <form action="artikli-edit-request.php" id="form-edit" method="POST">
                     <h3 class="edit-heading">Izmjena artikla</h3>
                     <div id="artikli-edit-inputs">
+                        <!-- ID -->
+                        <input name="id" id="id" type="hidden" value="">
+
                         <!-- Password -->
                         <div>
                             <div>
