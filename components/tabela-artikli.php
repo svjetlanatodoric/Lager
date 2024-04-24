@@ -1,5 +1,4 @@
 <head>
-    <link rel="stylesheet" href="../css/logout-btn.css">
     <link rel="stylesheet" href="../css/form-edit.css">
     <link rel="stylesheet" href="../css/tabela.css">
     <link rel="stylesheet" href="../css/modal.css">
@@ -75,22 +74,24 @@
                     while ($artikal = $response->fetch_assoc()) { ?>
                         <tbody>
                             <tr>
-                                    <td class="sifra">
-                                        <?php echo ($artikal['Sifra']) ?>
+                                <td class="id" style="display: none;"><?php echo ($artikal['id']) ?></td>
+                                <td class="sifra">
+                                    <?php echo ($artikal['Sifra']) ?>
+                                </td>
+                                <td class="naziv"><?php echo ($artikal['Naziv']) ?></td>
+                                <td class="jedinicaMjere"><?php echo ($artikal['JedinicaMjere']) ?></td>
+                                <td class="barkod"><?php echo ($artikal['Barkod']) ?></td>
+                                <td class="pluKod"><?php echo ($artikal['PLU_KOD']) ?></td>
+                                <?php
+                                if (isset($_COOKIE['rola']) && $_COOKIE['rola'] == 1) {
+                                ?>
+                                    <td id="artikli-edit-btn" onclick="izmijeniArtikal(this)">
+
+                                        <button class="table-button edit-btn">Uredi</button>
                                     </td>
-                                    <td class="naziv"><?php echo ($artikal['Naziv']) ?></td>
-                                    <td class="jedinicaMjere"><?php echo ($artikal['JedinicaMjere']) ?></td>
-                                    <td class="barkod"><?php echo ($artikal['Barkod']) ?></td>
-                                    <td class="pluKod"><?php echo ($artikal['PLU_KOD']) ?></td>
-                                    <?php
-                                    if (isset($_COOKIE['rola']) && $_COOKIE['rola'] == 1) {
-                                    ?>
-                                        <td id="artikli-edit-btn" onclick="izmijeniArtikal(this)" >
-                                     
-                                         <button class="table-button edit-btn">Uredi</button></td>
-                            <?php
-                                    }
-                            ?>
+                                <?php
+                                }
+                                ?>
                         </tbody>
                     <?php
                     }
