@@ -92,14 +92,14 @@
                     </div>
                 <?php
                 } ?>
-</div>
-                <!-- <a href="../admin/radnici-a.php">
+            </div>
+            <!-- <a href="../admin/radnici-a.php">
                     </a> -->
-                <li>
-                    <form action="../logout/logout.php">
-                        <button class="logout" >Odjavi se</button>
-                    </form>
-                </li>
+            <li>
+                <form action="../logout/logout.php">
+                    <button class="logout">Odjavi se</button>
+                </form>
+            </li>
         </ul>
     </div>
 
@@ -108,7 +108,6 @@
 <script src="../js/lager-add.js"></script>
 <script src="../js/radnici.js"></script>
 <script src="../js/navbar.js"></script>
-<script src="../js/anime-master/lib/anime.min.js"></script>
 
 
 </html>
